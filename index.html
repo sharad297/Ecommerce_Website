@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5545b84200.js" crossorigin="anonymous"></script>
     <title>Bikes Mart</title>
@@ -17,7 +17,7 @@
             <img src="images/logo.png" width="130px">
         </div>
         <nav>
-            <ul>
+            <ul id="MenuItems">
                 <li><a href="">Home</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">About</a></li>
@@ -26,6 +26,7 @@
             </ul>
         </nav>
         <img src="images/cart.png" width="30px" height="30px">
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
     </div>
     <div>
         <div class="row">
@@ -298,13 +299,14 @@
         </div>
     </div>
 </div>
+<!----------------------------------------Brands-------------------------------->
 
 <div class="footer">
     <div class="frow">
 
         <div class="col-lg-4 col-sm-12">
             <div class="footer-widget">
-                <img class=" " src="images/logo.png" alt="">
+                <img class=" " src="images/logo-white.png" alt="">
                 
                 <h2 class="footer-widget">Download Our App</h2>
                 <img src="images/app-store.png" width="140px" alt="">
@@ -319,7 +321,7 @@
                     <li><a href="">Coupons</a></li>
                     <li><a href="">Blog Posts</a></li>
                     <li><a href="">Retun Policy</a></li>
-                    <li><a href=""></a>Join Affiliate</li> 
+                    <li><a href="">Join Affiliate</a></li> 
                 </ul>
             </div>
         </div>
@@ -331,7 +333,7 @@
                     <li><a href="">Clothing</a></li>
                     <li><a href="">Footwear</a></li>
                     <li><a href="">Beauty</a></li>
-                    <li><a href=""></a>Accessories</li> 
+                    <li><a href="">Accessories</a></li> 
                 </ul>
             </div>
         </div>
@@ -356,9 +358,25 @@
                     </div>
             </div>
         </div>
-
-    </div>
+   </div>
+   <hr>
+   <p class="copyright">Copyright 2020</p>
 </footer>
-<!----------------------------------------Footer-------------------------------->
+<!-----------------------------------JS for toggle menu------------------------------------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight="200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight=="0px";
+        }
+    }
+</script>
 </body>
 </html>

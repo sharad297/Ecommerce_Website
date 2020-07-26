@@ -192,12 +192,9 @@ p{
 }
 /*----------------------------------------Footer--------------------------------*/
 .footer{
-    background-color: #282828;
-    color: #aba8a8;
-
+    background-color:black;
     padding-top: 50px;
     padding-bottom: 50px;
-
 }
 
 .frow{
@@ -210,6 +207,7 @@ p{
     padding-right: 50px;
 }
 .footer-widget{
+    color: whitesmoke;
     text-align: justify;
 }
 .widget-title{
@@ -221,18 +219,57 @@ p{
     line-height: 20px;
     margin: 10px 0 30px 0;
 }
-.cards i{
-    display:inline-block;
-    font-size: 30px;
-    margin-right: 12px;
+a {
+    text-decoration: none;
+    color: #FB2BEB5;
+}
+.copyright hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
 }
 
 /*---------------------------------------media query for menu--------------------------------*/
+.menu-icon{
+    width:28px;
+    margin-left: 20px;
+    display: none;
+}
 
-
-@media (max-width:  992px){
-    .frow{
-        flex-direction: column;
-        text-align: center ;
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left:0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+       display: block;
+       margin-right: 50px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+/*---------------------------------------media query for less than 600 screen size---------------------------*/
+@media only screen and (max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col-2,.col3,.col-4{
+        flex-basis: 100%;
     }
 }
